@@ -17,4 +17,12 @@ public class Printer {
         }
         System.out.println();
     }
+
+    public static void printLists(List<List<Integer>> lists) {
+        if (lists == null) { return; }
+        for (int i=0;i<lists.size();i++) {
+            printList(lists.get(i));
+        }
+        System.out.println();
+    }
 }
