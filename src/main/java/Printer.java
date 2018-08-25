@@ -25,6 +25,13 @@ public class Printer {
             node = node.next;
         }
         System.out.print("]");
+    }
+
+    public static void printNestedList(List<List<Integer>> lists) {
+        if (lists == null) { return; }
+        for (int i=0;i<lists.size();i++) {
+            printList(lists.get(i));
+        }
         System.out.println();
     }
 }
