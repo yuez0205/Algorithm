@@ -17,4 +17,14 @@ public class Printer {
         }
         System.out.println();
     }
+
+    public static void printListNode(ListNode node) {
+        System.out.print("ListNode: [ ");
+        while (node != null) {
+            System.out.print(node.val + " ");
+            node = node.next;
+        }
+        System.out.print("]");
+        System.out.println();
+    }
 }
