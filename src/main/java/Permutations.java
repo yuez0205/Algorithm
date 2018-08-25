@@ -58,7 +58,7 @@ public class Permutations {
         Permutations permutations = new Permutations();
         int[] nums = new int[]{1,1,2,3};
         List<List<Integer>> res = permutations.permute2(nums);
-        Printer.printLists(res);
+        Printer.printNestedList(res);
     }
 
 }
