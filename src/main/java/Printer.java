@@ -10,6 +10,14 @@ public class Printer {
         System.out.println();
     }
 
+    public static void print2DIntArray(int[][] nums) {
+        if (nums == null || nums.length == 0) { return; }
+        for (int[] num : nums) {
+            printIntArray(num);
+        }
+        System.out.println();
+    }
+
     public static void printList(List list) {
         if (list == null) { return; }
         for (int i=0;i<list.size();i++) {
@@ -33,5 +41,20 @@ public class Printer {
             printList(lists.get(i));
         }
         System.out.println();
+    }
+
+    public static void convertInput() {
+        String input = "[\n" +
+                "  [1, 2, 3, 4],\n" +
+                "  [5, 6, 7, 8],\n" +
+                "  [9,10,11,12]\n" +
+                "]";
+        input = input.replace("[", "{");
+        input = input.replace("]", "}");
+        System.out.println(input);
+    }
+
+    public static void main(String[] args) {
+        convertInput();
     }
 }
