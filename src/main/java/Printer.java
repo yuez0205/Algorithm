@@ -1,4 +1,6 @@
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Printer {
 
@@ -52,6 +54,24 @@ public class Printer {
         input = input.replace("[", "{");
         input = input.replace("]", "}");
         System.out.println(input);
+    }
+
+    public static void printTreeNodeByLevel(TreeNode root) {
+        if (root == null)  {
+            System.out.println("null");
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.val + " ");
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
     }
 
     public static void main(String[] args) {
