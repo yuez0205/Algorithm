@@ -1,3 +1,5 @@
+import Utils.Printer;
+
 public class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         if (n<1) { return new int[0][0]; }

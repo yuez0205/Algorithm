@@ -1,3 +1,5 @@
+import Utils.Printer;
+
 import java.util.ArrayList;
 
 public class BeautifulArray {

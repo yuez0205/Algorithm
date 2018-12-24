@@ -1,3 +1,6 @@
+import Utils.ListNode;
+import Utils.Printer;
+
 public class DeleteDuplicates2 {
 
     public ListNode deleteDuplicates(ListNode head) {

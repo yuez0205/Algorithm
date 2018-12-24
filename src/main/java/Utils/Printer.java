@@ -1,3 +1,5 @@
+package Utils;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -45,12 +47,7 @@ public class Printer {
         System.out.println();
     }
 
-    public static void convertInput() {
-        String input = "[\n" +
-                "  [1, 2, 3, 4],\n" +
-                "  [5, 6, 7, 8],\n" +
-                "  [9,10,11,12]\n" +
-                "]";
+    public static void convertInput(String input) {
         input = input.replace("[", "{");
         input = input.replace("]", "}");
         System.out.println(input);
@@ -74,7 +71,14 @@ public class Printer {
         }
     }
 
+    public static void printWithExpectResult(int actual, int expected) {
+        System.out.println("Actual value is " + actual + ", expected value is " + expected);
+    }
+
+    public static void printWithExpectResult(boolean actual, boolean expected) {
+        System.out.println("Actual value is " + actual + ", expected value is " + expected);
+    }
+
     public static void main(String[] args) {
-        convertInput();
     }
 }
